@@ -143,43 +143,11 @@
 <p>构建javaee工程</p>
 <p>1、创建普通java工程，可以改变packaging为war,并在src&#x2F;main目录下新增web项目结构文件webapp&#x2F;WEB-INF&#x2F;web.xml，刷新。</p>
 <p>2、使用idea的javatoweb插件，自动转换为web项目。</p>
-<p>版本提取可以写在pom.xml中的properties中，dependency中的version可以写在propertieis中声明的版本 ${变量}</p>
-<p>maven的声明周期分为</p>
-<p><strong>1、Clean 生命周期：</strong></p>
-<ul>
-<li><strong>clean</strong>：删除目标目录中的编译输出文件。这通常是在构建之前执行的，以确保项目从一个干净的状态开始。</li>
-</ul>
-<p><strong>2、Default 生命周期（也称为 Build 生命周期）：</strong></p>
-<ul>
-<li><strong>validate</strong>：验证项目的正确性，例如检查项目的版本是否正确。</li>
-<li><strong>compile</strong>：编译项目的源代码。</li>
-<li><strong>test</strong>：运行项目的单元测试。</li>
-<li><strong>package</strong>：将编译后的代码打包成可分发的格式，例如 JAR 或 WAR。</li>
-<li><strong>verify</strong>：对项目进行额外的检查以确保质量。</li>
-<li><strong>install</strong>：将项目的构建结果安装到本地 Maven 仓库中，以供其他项目使用。</li>
-<li><strong>deploy</strong>：将项目的构建结果复制到远程仓库，以供其他开发人员或团队使用。</li>
-</ul>
-<p><strong>3、Site 生命周期：</strong></p>
-<ul>
-<li><strong>site</strong>：生成项目文档和站点信息。</li>
-<li><strong>deploy-site</strong>：将生成的站点信息发布到远程服务器，以便共享项目文档。</li>
-<li>打包命令：mvn clean package.</li>
-</ul>
-<p>真正执行的是插件，周期-&gt; 命令-&gt;插件。</p>
-<hr>
-<p>插件版本不对，可以在pom.xml中定义插件的gav.</p>
-<p><code>&lt;build&gt;</code><br>  <code>&lt;plugins&gt;</code><br>    <code>**插件**gav--&gt;</code><br><code>\*    &lt;plugin&gt;</code><br>      <code>&lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;</code><br>      <code>&lt;artifactId&gt;maven-war-plugin&lt;/artifactId&gt;</code><br>      <code>&lt;version&gt;3.2.2&lt;/version&gt;</code><br>    <code>&lt;/plugin&gt;</code><br>  <code>&lt;/plugins&gt;</code><br><code>&lt;/build&gt;</code></p>
-<hr>
-<p>背景：一个大项目有多个模块，多个模块需要引用同版本的库，可以在父工程中为整个项目维护依赖信息的组合，保证了整个项目的使用规范、准确的jar包。</p>
-<p>父工程中声明gavp，其中package为pom，Maven的三种项目打包方式——pom，jar，war。</p>
-<p><strong>jar：工程的默认打包方式</strong>，打包成jar用作jar包使用。存放一些其他工程都会使用的类，工具类。我们可以在其他工程的pom文件中去引用它</p>
-<p> <strong>war</strong>：将会打包成war，<strong>发布在服务器上</strong>，如网站或服务。用户可以通过浏览器直接访问，或者是通过发布服务被别的工程调用</p>
-<p> <strong>pom</strong>：用在<strong>父级</strong>工程或聚合工程中，用来做jar包的版本控制，<strong>必须指明这个聚合工程的打包方式为pom</strong>。 </p>
-<p>子工程继承的gv和父工程一样，可以省略，只写a。</p>
-<p>父工程中在 dependencyManagement中声明依赖的gav，子工程在dependency中导入依赖，若和父工程中gav一样，可以省略version。若写version则会覆盖父版本。NOTICE:父工程不会去下载依赖，只有子工程才会。</p>
-<p>聚合语法：父项目中包含子项目的列表 ，通过触发父工程的构建，统一按顺序触发子工程构建的过程。在pom</p>
-<p>作用：统一管理子项目构建；优化构建顺序，对多个项目进行顺序控制。</p>
-
+        
+          <p class="article-more-link">
+            <a href="/2023/10/20/2023-20-20-MavenNotes/#more">Read More</a>
+          </p>
+        
       
     </div>
     <footer class="article-footer">
@@ -229,7 +197,7 @@
 <p>2023&#x2F;10&#x2F;12续写</p>
 <p>今天白天学了qt。</p>
 <p>今天晚上又继续搞了两个小时的github+jekyll主题，我先是在本地电脑测试，想把头像换成自己的，一直失败，改了n遍配置文件，虽说最终还是没改成功，但是这个配置过程锻炼了我解决问题的能力，学会看英文文档，懂得按配置的注释去配置相应的环境。这是我的第一篇博客，还是挺激动的。希望我能保持周更的频率去分享生活，分享学习心得等等。最后附上我8月份在伦敦与大本钟的合照吧！</p>
-<p><img src="/2023-10-12-FirstBlog.assets/london.jpg" alt="london"></p>
+<p><img src="/../../../../london.jpg" alt="london"></p>
 <p>今年大三啦，时间过得真快。</p>
 <p>话不多说，跑步去了~</p>
 <hr>
