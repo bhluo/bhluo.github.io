@@ -4,13 +4,17 @@
   <meta charset="utf-8">
   
   
-  <title>Hexo</title>
+  <title>Study Notes of Maven | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="学习笔记Mavenmaven依赖传递，依赖冲突（解决两原则：1、看引用路径谁短，引用哪个版本；2、先声明的先引用，如  a-c2.0,f-c1.0,最终导入a  f  c2.0. maven项目结构， 构建javaee工程 1、创建普通java工程，可以改变packaging为war,并在src&#x2F;main目录下新增web项目结构文件webapp&#x2F;WEB-INF&#x2F;web">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Study Notes of Maven">
+<meta property="og:url" content="http://example.com/2023/10/20/2023-20-20-MavenNotes/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="学习笔记Mavenmaven依赖传递，依赖冲突（解决两原则：1、看引用路径谁短，引用哪个版本；2、先声明的先引用，如  a-c2.0,f-c1.0,最终导入a  f  c2.0. maven项目结构， 构建javaee工程 1、创建普通java工程，可以改变packaging为war,并在src&#x2F;main目录下新增web项目结构文件webapp&#x2F;WEB-INF&#x2F;web">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-10-20T15:20:05.000Z">
+<meta property="article:modified_time" content="2024-03-21T04:40:59.465Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -67,99 +71,7 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-first-blog-in-2024" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2024/03/21/first-blog-in-2024/" class="article-date">
-  <time class="dt-published" datetime="2024-03-21T05:22:23.000Z" itemprop="datePublished">2024-03-21</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2024/03/21/first-blog-in-2024/">first blog in 2024</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>今年是2024年了</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2024/03/21/first-blog-in-2024/" data-id="clu0sdzc80004q8eo8y8g7rnv" data-title="first blog in 2024" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2024/03/21/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2024-03-21T05:08:10.674Z" itemprop="datePublished">2024-03-21</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2024/03/21/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2024/03/21/hello-world/" data-id="clu0rvmka0000n8eo6m819glq" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-2023-20-20-MavenNotes" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-2023-20-20-MavenNotes" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2023/10/20/2023-20-20-MavenNotes/" class="article-date">
   <time class="dt-published" datetime="2023-10-20T15:20:05.000Z" itemprop="datePublished">2023-10-20</time>
@@ -176,8 +88,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/10/20/2023-20-20-MavenNotes/">Study Notes of Maven</a>
+    <h1 class="p-name article-title" itemprop="headline name">
+      Study Notes of Maven
     </h1>
   
 
@@ -237,67 +149,28 @@
     </footer>
   </div>
   
-</article>
-
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-2023-10-12-FirstBlog" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/10/12/2023-10-12-FirstBlog/" class="article-date">
-  <time class="dt-published" datetime="2023-10-11T16:33:36.000Z" itemprop="datePublished">2023-10-12</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/mood-note/">mood note</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+    <a href="/2024/03/21/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
         
+          Hello World
+        
+      </div>
+    </a>
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/10/12/2023-10-12-FirstBlog/">My first site</a>
-    </h1>
   
+    <a href="/2023/10/12/2023-10-12-FirstBlog/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">My first site</div>
+    </a>
+  
+</nav>
 
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="My-first-Site"><a href="#My-first-Site" class="headerlink" title="My first Site"></a>My first Site</h1><h2 id="Hello-World"><a href="#Hello-World" class="headerlink" title="Hello World!"></a>Hello World!</h2><p>I am so excited because I have my own blog, I wil keep recording my daily study notes here. </p>
-<p><code>System.out.println(&quot;HelloWorld&quot;);</code></p>
-<p><u>忙了一下午，现在是晚上的10点，先去洗澡休息，明天继续加油！</u>–2023&#x2F;10&#x2F;11</p>
-<p>BYE</p>
-<hr>
-<p>2023&#x2F;10&#x2F;12续写</p>
-<p>今天白天学了qt。</p>
-<p>今天晚上又继续搞了两个小时的github+jekyll主题，我先是在本地电脑测试，想把头像换成自己的，一直失败，改了n遍配置文件，虽说最终还是没改成功，但是这个配置过程锻炼了我解决问题的能力，学会看英文文档，懂得按配置的注释去配置相应的环境。这是我的第一篇博客，还是挺激动的。希望我能保持周更的频率去分享生活，分享学习心得等等。最后附上我8月份在伦敦与大本钟的合照吧！</p>
-<p><img src="/2023-10-12-FirstBlog.assets/london.jpg" alt="london"></p>
-<p>今年大三啦，时间过得真快。</p>
-<p>话不多说，跑步去了~</p>
-<hr>
-<p>2023&#x2F;3&#x2F;21续写</p>
-<p>更换了hexo主题，配置比较简单</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/10/12/2023-10-12-FirstBlog/" data-id="clu0sdzc40001q8eo7ff350w8" data-title="My first site" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-
-  
 
 
 </section>
