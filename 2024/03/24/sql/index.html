@@ -22,7 +22,7 @@
 <meta property="og:image" content="https://cdn.xiaolincoding.com//mysql/other/f380ef357d065498d8d54ad07f145e09.png">
 <meta property="og:image" content="https://cdn.xiaolincoding.com/gh/xiaolincoder/ImageHost4@main/mysql/innodb/%E7%BC%93%E5%86%B2%E6%B1%A0.drawio.png">
 <meta property="article:published_time" content="2024-03-24T08:14:01.000Z">
-<meta property="article:modified_time" content="2024-03-24T08:16:18.708Z">
+<meta property="article:modified_time" content="2024-03-24T08:16:46.452Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="note">
 <meta name="twitter:card" content="summary">
@@ -114,7 +114,7 @@
 </li>
 <li><p>一致性则是通过持久性+原子性+隔离性来保证；</p>
 <p>一致性是由其他三个特性共同保证的。</p>
-</li>
+<span id="more"></span></li>
 </ul>
 <h2 id="并行事务会引发什么问题？"><a href="#并行事务会引发什么问题？" class="headerlink" title="并行事务会引发什么问题？"></a>并行事务会引发什么问题？</h2><p><strong>脏读（dirty read）、不可重复读（non-repeatable read）、幻读（phantom read）</strong></p>
 <p>脏读：<strong>一个事务「读到」了另一个「未提交事务修改过的数据」，就意味着发生了「脏读」现象。</strong>当事务B发生了回滚，那事务A读取的数据就是过期的。可以理解为领导还没下达正式任务你就凭着自己的揣摩开始干活，结果活干完了，任务的内容被改了。</p>
